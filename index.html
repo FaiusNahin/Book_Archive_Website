@@ -12,7 +12,24 @@
 </head>
 
 <body>
-    <h1>Book Archive</h1>
+    <h1 class="text-center my-4">Book Archive</h1>
+    <!-- Search Field -->
+    <div class="input-group mb-3 w-50 mx-auto">
+        <input id="search-field" type="text" class="form-control" placeholder="Enter a book name"
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button onclick="loadBooks()" class="btn btn-outline-secondary bg-primary text-white fs-5" type="button"
+            id="button-addon2">Button</button>
+    </div>
+
+    <!-- Not Found -->
+    <div id="not-found">
+
+    </div>
+
+    <!-- Books Card -->
+    <div id="books" class="row row-cols-1 row-cols-md-3 g-4 w-75 mx-auto mt-5">
+
+    </div>
 
 
     <!-- JS Links -->

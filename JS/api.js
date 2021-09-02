@@ -50,7 +50,17 @@ const displayBooks = data => {
     booksContainer.textContent = '';
 
     // Show 30 books result
-    books.slice(0, 50).forEach(book => {
+    books.slice(0, 30).forEach(book => {
+        // error handle for author name & publisher
+        const findArray = item => {
+            if (!item) {
+                return '';
+            }
+            else {
+                return item[0];
+            }
+        }
+
         const div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
@@ -59,8 +69,8 @@ const displayBooks = data => {
                 class="card-img-top" alt="..." style="height:450px;" >
             <div class="card-body mt-5">
               <h4 class="card-title text-primary">${book.title ? book.title : ''}</h4>
-              <p class="card-text"><span class="fw-bold text-success">Author Name:</span> ${book.author_name[0] ? book.author_name[0] : ''}</p>
-              <p class="card-text"><span class="fw-bold text-success">Publisher:</span> ${book.publisher[0] ? book.publisher[0] : ''}</p>
+              <p class="card-text"><span class="fw-bold text-success">Author Name:</span> ${findArray(book.author_name)}</p>
+              <p class="card-text"><span class="fw-bold text-success">Publisher:</span> ${findArray(book.publisher)}</p>
               <p class="card-text"><span class="fw-bold text-success">Publishing Date:</span> ${book.first_publish_year ? book.first_publish_year : ''}</p >
             </div >
           </div >

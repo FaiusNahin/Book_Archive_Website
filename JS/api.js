@@ -68,10 +68,10 @@ const displayBooks = data => {
             <img src="https://covers.openlibrary.org/b/id/${book.cover_i ? book.cover_i : ''}-M.jpg" 
                 class="card-img-top" alt="..." style="height:450px;" >
             <div class="card-body mt-5">
-              <h4 class="card-title text-primary">${book.title ? book.title : ''}</h4>
+              <h4 class="card-title text-primary"><span class="fw-bold text-success">Book Name:</span> ${book.title ? book.title : ''}</h4>
               <p class="card-text"><span class="fw-bold text-success">Author Name:</span> ${findArray(book.author_name)}</p>
               <p class="card-text"><span class="fw-bold text-success">Publisher:</span> ${findArray(book.publisher)}</p>
-              <p class="card-text"><span class="fw-bold text-success">Publishing Date:</span> ${book.first_publish_year ? book.first_publish_year : ''}</p >
+              <p class="card-text"><span class="fw-bold text-success">First Publish:</span> ${book.first_publish_year ? book.first_publish_year : ''}</p >
             </div >
           </div >
     `;

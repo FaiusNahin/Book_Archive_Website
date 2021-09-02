@@ -53,8 +53,8 @@ const displayBooks = data => {
         div.innerHTML = `
           <div class="card h-100">
             <img src="https://covers.openlibrary.org/b/id/${book.cover_i ? book.cover_i : ''}-M.jpg" 
-                class="card-img-top img-fluid" alt="...">
-            <div class="card-body">
+                class="card-img-top" alt="..." style="height:450px;" >
+            <div class="card-body mt-5">
               <h4 class="card-title text-primary">${book.title ? book.title : ''}</h4>
               <p class="card-text"><span class="fw-bold text-success">Author Name:</span> ${book.author_name[0] ? book.author_name[0] : ''}</p>
               <p class="card-text"><span class="fw-bold text-success">Publisher:</span> ${book.publisher[0] ? book.publisher[0] : ''}</p>

@@ -9,6 +9,9 @@ const loadBooks = () => {
     const noInput = document.getElementById('not-found');
     noInput.innerText = '';
 
+    const booksContainer = document.getElementById('books');
+    booksContainer.textContent = '';
+
     if (searchText === '') {
         const h1 = document.createElement('h1');
         h1.classList.add('text-center', 'text-danger')
